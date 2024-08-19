@@ -1,0 +1,43 @@
+[ Hotel ]
+-------------
+HotelID (PK)
+Name
+Address
+Phone
+
+     |
+     | 1
+     |  
+     v
+[ Room ]
+-------------
+RoomID (PK)
+RoomNumber
+Type
+Price
+HotelID (FK) -- References Hotel(HotelID)
+
+     |
+     | M
+     |
+     v
+[ Booking ]
+-------------
+BookingID (PK)
+Date
+CheckInDate
+CheckOutDate
+CustomerID (FK) -- References Customer(CustomerID)
+RoomID (FK) -- References Room(RoomID)
+
+     |
+     | 1
+     |
+     v
+[ Customer ]
+-------------
+CustomerID (PK)
+LastName
+FirstName
+Email
+Phone
